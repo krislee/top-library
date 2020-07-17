@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <link rel="stylesheet" type = "text/css" href="style.css">
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <div class="addImage">
+        <button id="addModal"> Add book to your Library</button>
+        <p> <strong>Click on Title to remove book. Click on status button to change reading status.</strong></p>
+    </div>
+    <!-- <button id="addModal"> Add book to your Library</button> -->
+    <table>
+        <thead>
+            <tr id="heading"> <!--Try to make this hidden until after the first book is added, but remain viewed after first book-->
+                <th id="title">Title</th>
+                <th id="author">Author</th>
+                <th>Pages</th>
+                <th id="borderStatus">Status</th>
+            </tr>
+        <thead>
+        <tbody id="bookList"></tbody>
+    </table>
+    <div id="modal"> 
+        <div id="modal-content">
+            <div id="inner-modal-content">
+            <span class="close">&times;</span>
+            <label for="bookInfo"><span class="enter">Enter book info </span></label></br>
+            <input type="text" id="inputTitle" class="textTitle"placeholder="Title"></br>
+            <input type="text" id="inputAuthor" class="textAuthor" placeholder="Author"></br>
+            <input type="text" id="inputPages" class="textPages" placeholder="Pages"></br>
+            <select id="readingProgress" class="readingStatus">
+                <option disabled>--Select--</option>
+                <option >Read</option>
+                <option >In Progress</option>
+                <option >Not Read</option>
+            </select>
+            <div id="buttonDiv">
+                <button id="submit">Submit</button>
+            </div>
+        </div>
+        </div>
+    </div>
+</body>
+</html>

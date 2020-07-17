@@ -1,0 +1,146 @@
+body{
+    margin:0 auto;
+    width: 100%;
+
+    /* text-align:center; didn't change anything*/
+}
+table{
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+    border: 1px solid black;
+    position:fixed;
+    top: 200px;
+}
+/* to give border inside for all rows and columns inside selector needs to be
+table, th, and td */
+th{ 
+    border-bottom: 1px solid black;
+    padding: 15px 0 15px 0;
+    background-color: #dddddd
+}
+td, th{
+    text-align: center;
+    word-break:break-all; /* this wraps text based on the cell's width */
+   
+}
+td{
+    padding: 7px;
+}
+tr:hover{
+    background-color: #8b8585;
+}
+tr:nth-child(even){
+    background-color: #dddddd;
+}
+.authorClass, #author, .deleteRow, #title{
+    width: 35%;
+}
+.deleteRow{
+    margin-right: 20px;
+    padding-right:10px;
+}
+ .authorClass{
+    padding-left: 15px;
+} 
+p{
+    position:relative;
+    top: 75px;
+    color:white;
+    font-size: 20px;
+}
+/* Modal Display */
+#modal{
+    display:none;
+    position:fixed;
+    z-index:1;
+    overflow:auto;
+    width: 100%;
+    height:100%;
+    background-color:rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+    margin: 0 auto;
+    text-align:center;
+}
+#modalContent{
+    /* background-color: blue;  doesn't show up even if background color
+    of #modal is not set */
+    width: 50%;
+    margin: auto;
+    height:300px;
+    /* padding-top:80%; didn't affect anything*/
+    /* display:inline-block;
+    text-align:center; didn't affect anything */
+    
+}
+#inner-modal-content{
+    position: relative;
+    /* bottom: 25%; doesn't affect the position of popup box for position:relative
+    position:absolute, will be affected but because of the div with the background image
+    the popup box will be blocked when trying to go more up*/
+    background-color: white;
+    width: 50%;
+    height:50%;
+    margin:0;
+    display:inline-block; 
+}
+.close{
+    float:right;
+    color: black;
+    font-size: 30px;
+    padding-right: 30px;
+}
+.close:hover, .close:focus{
+    color:red;
+    cursor: pointer;
+}
+/* Add book info button */
+/* .addBook{
+    display:block;
+    text-align: center;
+} */
+#addModal{
+    position: relative;
+    top:60px; 
+    /* left:39%; */
+    padding: 10px;
+    display:inline-block;
+}
+/* label{
+   text-align:center; didn't center Enter book Info
+} */
+#addModal:hover {
+    background-color: rgb(42, 147, 165);
+}
+.enter{
+    display:inline-block;
+    padding-top: 10px;
+    padding-bottom:20px;
+    font-size: 30px;
+    width:100%;
+    /* text-align:center; didn't center Enter book Info*/
+}
+/* Input */
+.textTitle, .textAuthor, .textPages, .readingStatus{
+    margin: 5px;
+    padding: 15px;
+    width: 50%;
+}
+/* Submit button */
+#buttonDiv{
+    text-align:center;
+}
+#submit{
+    margin: 5px;
+    margin-bottom:10px;
+    padding: 10px;
+    display:inline-block;
+}
+.addImage{
+    height:200px; 
+    width: 100%;
+    background-image: url("https://miro.medium.com/max/11914/0*L5spudfxjpJRzWFL");
+    background-size: 100%;
+    text-align: center;
+    margin:0 auto;
+}
